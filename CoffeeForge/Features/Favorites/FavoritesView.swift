@@ -93,8 +93,7 @@ struct FavoriteDetailSheet: View {
                 }
 
                 Section("Состав") {
-                    PriceRow(label: config.coffeeBase.displayName, value: config.coffeeBase.basePrice)
-                    PriceRow(label: "Размер \(config.cupSize.displayName)", value: config.cupSize.price)
+                    PriceRow(label: "Базовая стоимость (\(config.cupSize.displayName))", value: config.basePrice)
                     PriceRow(label: "Молоко: \(config.milkType.displayName)", value: config.milkPrice)
                     PriceRow(label: "Сироп: \(config.syrup.displayName)", value: config.syrupPrice)
                     Divider()

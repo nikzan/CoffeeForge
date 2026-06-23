@@ -16,14 +16,16 @@ extension Color {
     static let cfMilk        = Color(red: 0.988, green: 0.973, blue: 0.929) // для превью молока
     static let cfOatMilk     = Color(red: 0.957, green: 0.925, blue: 0.843) // для превью овсяного
     static let cfCoconutMilk = Color(red: 0.980, green: 0.957, blue: 0.910) // для превью кокосового
-    static let cfSyrupCaramel   = Color(red: 0.792, green: 0.557, blue: 0.275)
-    static let cfSyrupVanilla   = Color(red: 0.933, green: 0.867, blue: 0.667)
-    static let cfSyrupHazelnut  = Color(red: 0.659, green: 0.478, blue: 0.349)
+    static let cfSyrupCaramel   = Color(red: 0.851, green: 0.486, blue: 0.118) // насыщенная карамель
+    static let cfSyrupVanilla   = Color(red: 0.957, green: 0.835, blue: 0.467) // тёплая ваниль
+    static let cfSyrupHazelnut  = Color(red: 0.616, green: 0.357, blue: 0.184) // глубокий фундук
     static let cfEspressoShot   = Color(red: 0.165, green: 0.094, blue: 0.055) // #2A180E
     static let cfCoffeeLiquid   = Color(red: 0.365, green: 0.212, blue: 0.122) // #5D361F
     static let cfMilkFoam       = Color(red: 0.949, green: 0.914, blue: 0.867)
     static let cfCupGlass       = Color(red: 0.937, green: 0.945, blue: 0.957).opacity(0.5)
     static let cfCupOutline     = Color(red: 0.788, green: 0.796, blue: 0.820)
+    static let cfGlassHighlight  = Color(red: 1.0, green: 1.0, blue: 1.0)        // блик на стекле
+    static let cfGlassShade      = Color(red: 0.557, green: 0.569, blue: 0.612)  // тень-кромка стекла
 
     // --- Accent Gradient ---
     static let cfWarmAccent    = LinearGradient(

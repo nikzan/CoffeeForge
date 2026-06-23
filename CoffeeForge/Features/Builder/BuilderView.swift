@@ -84,13 +84,11 @@ struct BuilderView: View {
 
                 // MARK: Итог
                 Section("Итог") {
-                    PriceRow(label: "Базовая стоимость", value: config.basePrice)
+                    PriceRow(label: "Базовая стоимость (\(config.cupSize.displayName))", value: config.basePrice)
                     PriceRow(label: "Молоко", value: config.milkPrice)
                     PriceRow(label: "Сироп", value: config.syrupPrice)
 
-                    Divider().listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
-
-                    PriceRow(label: "Итого за стакан", value: config.cupTotal, isTotal: true)
+                    PriceRow(label: "Итого за стакан", value: config.cupTotal)
                     PriceRow(label: "Заказ (\(config.quantity) шт.)", value: config.orderTotal, isTotal: true)
                 }
             }

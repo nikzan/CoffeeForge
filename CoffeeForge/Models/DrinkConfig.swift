@@ -9,7 +9,8 @@ struct DrinkConfig: Codable, Equatable {
 
     // --- Computed properties (ТЗ: все цены — вычисляемые) ---
 
-    /// Базовая стоимость с учётом размера стакана (сейчас просто размер; можно scale)
+    /// Базовая стоимость напитка = цена размера стакана.
+    /// Стоимость кофейной основы уже заложена в цену размера, отдельно не считается.
     var basePrice: Int {
         cupSize.price
     }
@@ -26,8 +27,7 @@ struct DrinkConfig: Codable, Equatable {
 
     /// Итоговая стоимость одного стакана
     var cupTotal: Int {
-        let base = coffeeBase.basePrice + cupSize.price
-        return base + milkPrice + syrupPrice
+        basePrice + milkPrice + syrupPrice
     }
 
     /// Итоговая стоимость всего заказа (количество стаканов)

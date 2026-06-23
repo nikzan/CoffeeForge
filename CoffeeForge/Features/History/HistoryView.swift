@@ -86,8 +86,7 @@ struct OrderDetailView: View {
     var body: some View {
         Form {
             Section("Детали заказа") {
-                PriceRow(label: order.config.coffeeBase.displayName, value: order.config.coffeeBase.basePrice)
-                PriceRow(label: "Размер \(order.config.cupSize.displayName)", value: order.config.cupSize.price)
+                PriceRow(label: "Базовая стоимость (\(order.config.cupSize.displayName))", value: order.config.basePrice)
                 PriceRow(label: "Молоко: \(order.config.milkType.displayName)", value: order.config.milkPrice)
                 PriceRow(label: "Сироп: \(order.config.syrup.displayName)", value: order.config.syrupPrice)
                 Divider()
