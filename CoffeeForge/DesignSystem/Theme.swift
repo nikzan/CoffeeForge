@@ -38,4 +38,6 @@ extension UIColor {
     static let cfCaramel     = UIColor(Color.cfCaramel)
     static let cfPaper       = UIColor(Color.cfPaper)
     static let cfCrema       = UIColor(Color.cfCrema)
+    static let cfLatte       = UIColor(Color.cfLatte)
+    static let cfCinnamon    = UIColor(Color.cfCinnamon)
 }

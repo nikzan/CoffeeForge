@@ -121,6 +121,7 @@ struct BuilderView: View {
             }
         }
         .tint(.cfCinnamon)
+        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: config)
     }
 
     // MARK: - Save Favorite Sheet

@@ -13,16 +13,16 @@ struct PriceRow: View {
         HStack {
             Text(label)
                 .font(isTotal ? .body.weight(.semibold) : .body)
-                .foregroundStyle(.cfEspresso)
+                .foregroundStyle(Color.cfEspresso)
             Spacer()
             if isSeparator {
                 Divider()
                     .frame(width: 24)
-                    .overlay(.cfLatte)
+                    .overlay(Color.cfLatte)
             } else {
                 Text(value, format: .currency(code: "RUB").locale(Locale(identifier: "ru_RU")))
                     .font(isTotal ? .title3.weight(.bold) : .body)
-                    .foregroundStyle(isTotal ? .cfCinnamon : .cfEspresso)
+                    .foregroundStyle(isTotal ? Color.cfCinnamon : Color.cfEspresso)
                     .monospacedDigit()
             }
         }
@@ -30,7 +30,7 @@ struct PriceRow: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     VStack(spacing: 8) {
         PriceRow(label: "Базовая стоимость", value: 250)
         PriceRow(label: "Молоко", value: 60)
@@ -41,5 +41,4 @@ struct PriceRow: View {
     }
     .padding()
     .background(Color.cfPaper)
-    .previewLayout(.sizeThatFits)
 }

@@ -71,7 +71,7 @@ private struct OrderRowView: View {
             Spacer()
             Text(order.config.orderTotal, format: .currency(code: "RUB").locale(Locale(identifier: "ru_RU")))
                 .font(.title3.weight(.semibold))
-                .foregroundStyle(.cfCinnamon)
+                .foregroundStyle(Color.cfCinnamon)
                 .monospacedDigit()
         }
         .padding(.vertical, 4)

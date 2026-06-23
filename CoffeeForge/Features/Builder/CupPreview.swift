@@ -15,8 +15,9 @@ struct CupPreview: View {
                 .opacity(liquidFillRatio > 0.3 ? 0.6 : 0)
 
             // 2. Силуэт стакана (основная фигура)
-            cupShape
+            RoundedRectangle(cornerRadius: 16)
                 .fill(.ultraThinMaterial)
+                .frame(width: cupWidth, height: cupHeight)
                 .overlay(alignment: .bottom) {
                     // 3. Жидкость
                     liquidView
@@ -36,6 +37,7 @@ struct CupPreview: View {
         }
         .frame(width: cupWidth, height: cupHeight * 0.65)
         .padding(.top, 16)
+        .animation(.spring(response: 0.4, dampingFraction: 0.75), value: config)
     }
 
     // MARK: - Cup Metrics
@@ -124,6 +126,10 @@ struct CupPreview: View {
                     .fill(Color.cfLatte.opacity(0.35))
                     .frame(width: 3, height: 20 + CGFloat(i * 8))
                     .offset(y: CGFloat(i * 4) - 8)
+                    .animation(
+                        .easeInOut(duration: 2.0 + Double(i) * 0.5).repeatForever(autoreverses: true),
+                        value: config
+                    )
             }
         }
     }
